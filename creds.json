@@ -1,0 +1,6 @@
+{
+    "user": "",
+    "password": "redispass",
+    "host": "",
+    "port": 6379
+}
