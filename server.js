@@ -26,8 +26,6 @@ fs.readFile('creds.json', 'utf-8', (err, data) => {
   client.on("error", function(error) {
     console.error(error);
   });
-
-
 });
 
 const robotName = 'Bear Bot';
@@ -42,7 +40,7 @@ io.on('connection', socket => {
     userJoin({ socketId: socket.id, username, room }, client).then((user) => {
 
       socket.join(user.room)
-
+      socket.emit('loginedUser', user.username);
       // Welcome current user
       formatMessage({ 
         room: user.room, 
