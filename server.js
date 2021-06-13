@@ -21,8 +21,8 @@ let client;
 fs.readFile('creds.json', 'utf-8', (err, data) => {
   if (err) throw err;
   let creds = JSON.parse(data);
-  client = redis.createClient('redis://' + creds.user + ':' + creds.password + '@' + creds.host + ':' + creds.port);
-
+  client = redis.createClient(creds.port, creds.host, {detect_buffers: true});
+  client.auth(creds.password, redis.print);
   client.on("error", function(error) {
     console.error(error);
   });

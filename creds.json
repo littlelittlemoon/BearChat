@@ -1,6 +1,6 @@
 {
-    "user": "",
-    "password": "redispass",
-    "host": "",
+    "user": "bearchat",
+    "password": "5429a2d7f23a27@de6990e36c8b7dB",
+    "host": "bearchatpublic.redis.rds.aliyuncs.com",
     "port": 6379
 }
