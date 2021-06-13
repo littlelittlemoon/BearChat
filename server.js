@@ -26,6 +26,13 @@ fs.readFile('creds.json', 'utf-8', (err, data) => {
   client.on("error", function(error) {
     console.error(error);
   });
+
+  // Redis Client Ready
+  client.once('ready', function () {
+    // clear cache when restart app
+    client.del(['chatting_users', 'room_users', 'chat_messages']);
+  });
+
 });
 
 const robotName = 'Bear Bot';
