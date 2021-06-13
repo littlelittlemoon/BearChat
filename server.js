@@ -52,7 +52,7 @@ io.on('connection', socket => {
       formatMessage({ 
         room: user.room, 
         username: robotName, 
-        text: 'Welcome to BearChar'
+        text: 'Welcome to BearChar, have fun! :)'
       }, client).then((msg) => {
         socket.emit('message', msg);
       }).then(() => {
