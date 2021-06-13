@@ -1,5 +1,7 @@
 # BearChat App
 
+[演示地址](https://bearchatapp.herokuapp.com/)
+
 ## 介绍
 
 这是一款实时多人聊天室。
