@@ -3,13 +3,13 @@ const fs = require('fs');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
-const formatMessage = require('./utils/messages');
+const formatMessage = require('./cache/messages');
 const {
   userJoin, 
   getCurrentUser, 
   getRoomUsers, 
   userLeave 
-} = require('./utils/users');
+} = require('./cache/users');
 
 const app = express();
 const server = http.createServer(app);
@@ -27,7 +27,7 @@ fs.readFile('creds.json', 'utf-8', (err, data) => {
     console.error(error);
   });
 
-  
+
 });
 
 const robotName = 'Bear Bot';
