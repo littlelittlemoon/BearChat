@@ -49,9 +49,8 @@ a {
 	max-width: 1100px;
 	margin: 30px auto;
 	overflow: hidden;
-	-ms-overflow-style: none;
 }
-.chat-container::-webkit-scrollbar { 
+.chat-messages::-webkit-scrollbar,.online-users::-webkit-scrollbar { 
 	width: 0 !important;
 }
 
@@ -74,8 +73,7 @@ a {
 .chat-sidebar {
 	background: var(--dark-color-b);
 	color: #fff;
-	padding: 20px 20px 60px;
-	overflow-y: scroll;
+	padding: 20px 20px 20px;
 }
 
 .chat-sidebar h2 {
@@ -93,10 +91,17 @@ a {
 	padding: 10px 0;
 }
 
+.online-users {
+	height: 220px;
+	overflow: scroll;
+	-ms-overflow-style: none;
+}
+
 .chat-messages {
 	padding: 30px 30px 0px 30px;
 	max-height: 500px;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 }
 
 .chat-messages .message {
