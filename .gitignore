@@ -1,1 +1,6 @@
+# ignore node_module
 node_modules
+
+.DS_Store
+# ignore redis config file
+creds.json
